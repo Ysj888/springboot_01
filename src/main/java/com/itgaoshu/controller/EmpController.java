@@ -21,4 +21,10 @@ public class EmpController {
         model.addAttribute("emps",emps);
         return  "list2";
     }
+    @RequestMapping("selectById.do")
+    public  String selectById(Model model){
+        Emp emps=empService.selectById(1);
+        model.addAttribute("emps",emps);
+        return "list2";
+    }
 }

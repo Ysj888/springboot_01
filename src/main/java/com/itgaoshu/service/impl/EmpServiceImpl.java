@@ -19,4 +19,7 @@ public class EmpServiceImpl implements EmpService{
         System.out.println("第一次查询");
         return empMapper.selectAll();
     }
+    public  Emp selectById(int id){
+        return empMapper.selectByPrimaryKey(id);
+    }
 }
